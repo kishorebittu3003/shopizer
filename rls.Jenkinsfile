@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage ('Clone') {
             steps {
-                git branch: 'realease', giturl: 'https://github.com/kishorebittu3003/shopizer.git'
+                git branch: 'realease', url: 'https://github.com/kishorebittu3003/shopizer.git'
             }
         }
 
