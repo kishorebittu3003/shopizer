@@ -1,5 +1,5 @@
 pipeline {
-    agent {label 'JVM'}
+    agent {label 'GIT_SSH'}
     triggers {
         pollSCM('0 17 * * *')
     }
