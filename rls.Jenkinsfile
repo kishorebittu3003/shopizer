@@ -1,12 +1,13 @@
 pipeline {
     agent any
     triggers{
-        pollSCM('13 17 * * *')
+        pollSCM('30 17 * * *')
     }
     stages {
         stage ('Clone') {
             steps {
-                git branch: 'realease', url: 'https://github.com/kishorebittu3003/shopizer.git'
+                git url: 'https://github.com/kishorebittu3003/shopizer.git',
+                    branch: 'realease'
             }
         }
 
