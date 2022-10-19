@@ -6,7 +6,13 @@ pipeline {
     stages {
         stage('vcs') {
             steps {
-                git branch: 'developer', url: 'https://github.com/kishorebittu3003/shopizer.git'         
+                git url: 'https://github.com/kishorebittu3003/shopizer.git',
+                    branch: 'developer'         
+            }
+        }
+        stage('build'){
+            steps{
+                sh 'mvn clean package'
             }
         }
         stage('artifactory') {
